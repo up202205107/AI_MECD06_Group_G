@@ -1,14 +1,17 @@
-COP Model Formulation
+# COP Model Formulation
 To solve this mathematically, we define the following components based on the problem description:
-Variables and Domains
-$M$: Total available pizzas $\{P_0, P_1, ..., P_{M-1}\}$.
 
+## Variables and Domains
+
+$M$: Total available pizzas $\{P_0, P_1, ..., P_{M-1}\}$.
 
 $T_N$: Number of teams of size $N \in \{2, 3, 4\}$.
 
 
 Decision Variable ($x_{i,j}$): A binary variable where $x_{i,j} = 1$ if Pizza $i$ is assigned to Team $j$, and $0$ otherwise.
-Constraints
+
+## Constraints
+
 Pizza Uniqueness: Each pizza can be delivered to at most one team.
 
 $$\sum_{j} x_{i,j} \le 1 \quad \forall i \in \{0, \dots, M-1\}$$
@@ -18,14 +21,15 @@ $$\sum_{i} x_{i,j} \in \{0, L\} \quad \forall \text{ Team } j \text{ of size } L
 Team Count: The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
 
-Objective Function
+## Objective Function
 The goal is to maximize the sum of the squares of the number of unique ingredients per team. Let $I_j$ be the set of unique ingredients in all pizzas assigned to team $j$.
 
 
 $$\text{Maximize } \sum_{j} (|I_j|)^2$$
 
-Solving with Neighborhood Search & Greedy Heuristics
+# Solving with Neighborhood Search & Greedy Heuristics
 Because this problem is a variation of the Set Covering Problem (trying to cover as many unique ingredients as possible with limited subsets/pizzas), it is NP-hard. For the Hash Code competition, a hybrid approach is most effective:
+
 Step 1: Initial Greedy Construction
 A "Greedy" approach provides a fast, feasible starting solution:
 Prioritize large teams: Since the score is the square of unique ingredients, larger teams (4-person) generally offer a higher scoring potential ($10^2=100$ vs $5^2=25$).
@@ -35,11 +39,13 @@ Ingredient Diversity: For the first team, pick the pizza with the most ingredien
 
 
 Repeat until you run out of pizzas or teams.
+
 Step 2: Neighborhood Search (Refinement)
 Once you have a greedy solution, you can improve it using the Move types we discussed:
 Swap: Swap Pizza A (in Team 1) with Pizza B (in Team 2). If the total sum of $(|I_1|)^2 + (|I_2|)^2$ increases, keep the change.
 Relocate: Move an unassigned pizza into a team if it provides more unique ingredients than one currently assigned.
-3. Applying Simulated Annealing
+
+## Applying Simulated Annealing
 To reach a near-optimal score for large datasets (like $M=100,000$), you can apply Simulated Annealing:
 Start with your greedy solution.
 Perturb: Randomly swap two pizzas between different teams.
