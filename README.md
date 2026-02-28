@@ -12,12 +12,14 @@ Decision Variable ($x_{i,j}$): A binary variable where $x_{i,j} = 1$ if Pizza $i
 
 ## Constraints
 
-Pizza Uniqueness: Each pizza can be delivered to at most one team.
+Pizza Uniqueness: Each pizza can be delivered to at most one team. 
 
 $$\sum_{j} x_{i,j} \le 1 \quad \forall i \in \{0, \dots, M-1\}$$
+
 Team Capacity: If a team of size $L$ receives a delivery, they must receive exactly $L$ pizzas.
 
 $$\sum_{i} x_{i,j} \in \{0, L\} \quad \forall \text{ Team } j \text{ of size } L$$
+
 Team Count: The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
 
