@@ -1,4 +1,4 @@
-1. COP Model Formulation
+COP Model Formulation
 To solve this mathematically, we define the following components based on the problem description:
 Variables and Domains
 $M$: Total available pizzas $\{P_0, P_1, ..., P_{M-1}\}$.
@@ -23,7 +23,8 @@ The goal is to maximize the sum of the squares of the number of unique ingredien
 
 
 $$\text{Maximize } \sum_{j} (|I_j|)^2$$
-2. Solving with Neighborhood Search & Greedy Heuristics
+
+Solving with Neighborhood Search & Greedy Heuristics
 Because this problem is a variation of the Set Covering Problem (trying to cover as many unique ingredients as possible with limited subsets/pizzas), it is NP-hard. For the Hash Code competition, a hybrid approach is most effective:
 Step 1: Initial Greedy Construction
 A "Greedy" approach provides a fast, feasible starting solution:
