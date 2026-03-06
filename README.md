@@ -21,7 +21,13 @@ Team Capacity: If a team $j$ of size $N$ receives a delivery, the team must rece
 
 $$\sum_{i} x_{i,j, N} \in \{0, N\} \quad \forall \text{ Team } j \text{ of size } N$$
 
-Team Count: The number of deliveries to teams of size $N$ cannot exceed $T_N$.
+Team Count: 
+
+The Total number of deliveries to teams cannot exceed the Total number of Teams
+
+$D$ = $$\sum_{N}T_N$: Number of teams of size $N \in \{2, 3, 4\}$.
+
+The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
 
 ## Objective Function
