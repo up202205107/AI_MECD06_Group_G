@@ -25,10 +25,8 @@ Team Count:
 
 The Total number of deliveries to teams cannot exceed the Total number of Teams
 
-$$\sum_{N} D_{N} \in \{0, N\} \quad \forall \text{ Team } j \text{ of size } N$$
+$$\sum_{n} T_{n} \le 1 \quad \forall i \in \{0, \dots, M-1\}$$
 
-
-$D$ = $$\sum_{N}T_N$: Number of teams of size $N \in \{2, 3, 4\}$.
 
 The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
