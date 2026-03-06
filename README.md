@@ -25,8 +25,7 @@ Team Count:
 
 The Total number of deliveries to teams cannot exceed the Total number of Teams
 
-$$\sum_{n} T_{n} \le 1 \quad \forall i \in \{0, \dots, M-1\}$$
-
+$$D \le \sum_{n} T_{n}$$
 
 The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
