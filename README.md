@@ -29,7 +29,7 @@ $$D \le \sum_N T_N$$
 
 The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
-
+$D_N$ \le \$T_N$
 
 ## Objective Function
 The goal is to maximize the sum of the squares of the number of unique ingredients per team. Let $I_j$ be the set of unique ingredients in all pizzas assigned to team $j$.
