@@ -25,7 +25,7 @@ Team Count:
 
 The Total number of deliveries to teams cannot exceed the Total number of Teams
 
-$$D \le \sum_{n} T_{n}$$
+$$D \le \sum_n T_n$$
 
 The number of deliveries to teams of size $N$ cannot exceed $T_N$.
 
