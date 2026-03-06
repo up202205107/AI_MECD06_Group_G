@@ -7,8 +7,6 @@ $M$: Total available pizzas $\{P_0, P_1, ..., P_{M-1}\}$.
 
 $T_N$: Number of teams of size $N \in \{2, 3, 4\}$.
 
-$D$: Total number of deliveries $\{P_0, P_1, ..., P_{M-1}\}$.
-
 Decision Variable ($x_{i,j, N}$): A binary variable where $x_{i,j, N} = 1$ if Pizza $i$ is assigned to a Team $j$ with $N$ members, and $0$ otherwise.
 
 ## Constraints
