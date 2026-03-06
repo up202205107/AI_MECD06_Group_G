@@ -25,9 +25,10 @@ Team Count:
 
 The Total number of deliveries to teams cannot exceed the Total number of Teams
 
-$$D \le \sum_n T_n$$
+$$D \le \sum_N T_N$$
 
 The number of deliveries to teams of size $N$ cannot exceed $T_N$.
+
 
 
 ## Objective Function
